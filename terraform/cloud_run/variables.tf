@@ -3,11 +3,14 @@ variable "gcp_auth_file" {
   description = "GCP authentication file"
 }
 variable "app_project" {
-  type        = string
+  type = string
 }
 variable "gcp_region" {
   type = string
 }
-variable "image_name" {
+variable "app_name" {
+  type = string
+}
+variable "app_version" {
   type = string
 }

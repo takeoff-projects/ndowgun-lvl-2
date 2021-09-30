@@ -92,8 +92,6 @@ func getEvents(w http.ResponseWriter, r *http.Request) {
 	_, err = client.GetAll(ctx, query, &events)
 	if err != nil {
 		http.Error(w, err.Error(), 500)
-	} else {
-		fmt.Printf("Found %d events in db\n", len(events))
 	}
 
 	client.Close()
